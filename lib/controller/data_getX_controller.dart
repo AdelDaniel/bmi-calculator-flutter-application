@@ -39,7 +39,7 @@ class Controller extends GetxController {
 
   addNewResult(BmiData bmiDataItem) async {
     //to check all data in the list from db helper before insert new
-    //so it will fill the tabel first then add new
+    //so it will fill the table first then add new
     await getResultsFromDbHelper();
     int returnedId = await dbHelper.insert(bmiDataItem);
     bmiDataItem.id = returnedId;

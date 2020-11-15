@@ -65,6 +65,8 @@ class SaveDialog extends StatelessWidget {
                   color: activeColor,
                   child: Text('Submit'),
                   onPressed: () async {
+                    Get.back();
+                    Get.snackbar('Saving', 'please wait until saving....' ,icon: Icon(Icons.timer));
                     await Get.find<Controller>().addNewResult(
                       BmiData(
                           detail: resultText,
@@ -81,6 +83,7 @@ class SaveDialog extends StatelessWidget {
                     Get.snackbar('Saved', 'Save your Result');
                     Get.rawSnackbar(
                         title: 'Saved', message: 'Save your Result');
+
                   }),
             ],
           ),
