@@ -21,6 +21,10 @@ class BMICalculator extends StatelessWidget {
     ]);
 
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+        title: "BMI Calculation by Adel Nabil",
+
+
         theme: ThemeData(
           appBarTheme: AppBarTheme(
             color: kMainColor,
