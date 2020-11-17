@@ -1,4 +1,4 @@
-import 'package:bmi/helper/db_helper.dart';
+import '../helper/db_helper.dart';
 import 'package:get/get.dart';
 import '../model/data_model.dart';
 
@@ -68,31 +68,7 @@ class Controller extends GetxController {
     return ;
   }
 
-  // Future<List<BmiData>> getResultsFromDbHelper() async {
-  //   print('c');
-  //   var data = (await dbHelper.getAllResults());
-  //   print(data);
-  //   bmiData = data.map((item) => BmiData(
-  //       id: item["id"].toString(),
-  //       title: item["title"].toString(),
-  //       detail: item['detail'].toString(),
-  //       result: item["result"],
-  //       weight: item["weight"],
-  //       age: item["age"],
-  //       height: item["height"],
-  //       gender: item["gender"],
-  //       dateTime: item["dateTime"]))
-  //       .toList();
-  //   print("n");
-  //   print(bmiData[0]);
-  //   return bmiData.reversed;
-  // }
 
-  // Future<dynamic> getResultsFromDbHelper() async {
-  //   print('c');
-  //   return await dbHelper.getAllResults();
-  //   // bmiData.reversed;
-  // }
 
   test() {
     bmiData.add(

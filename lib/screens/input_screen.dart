@@ -1,5 +1,5 @@
-import 'package:bmi/helper/db_helper.dart';
-import 'package:bmi/model/data_model.dart';
+import '../helper/db_helper.dart';
+import '../model/data_model.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -69,6 +69,16 @@ class _InputScreenState extends State<InputScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [
+                  inactiveColor.withOpacity(0.7),
+                  activeColor.withOpacity(0.7)
+                ],
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter
+            )
+        ),
         child: Column(
           //mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.end,

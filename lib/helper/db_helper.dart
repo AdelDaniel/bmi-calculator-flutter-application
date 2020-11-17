@@ -1,4 +1,4 @@
-import 'package:bmi/model/data_model.dart';
+import '../model/data_model.dart';
 import 'package:path/path.dart'
     as path; // will find the location or the path of database
 import 'package:sqflite/sqflite.dart';

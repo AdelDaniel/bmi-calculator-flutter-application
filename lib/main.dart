@@ -1,3 +1,4 @@
+import 'file:///J:/max_projects/bmi/lib/screens/bottom_navigator_bar.dart';
 import 'package:bmi/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -5,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
 import 'screens/input_screen.dart';
-import 'tab_controller.dart';
+import 'screens/tab_controller.dart';
 import 'screens/result_screen.dart';
 import 'screens/table_screean.dart';
 import 'package:flutter/services.dart';
@@ -22,8 +23,7 @@ class BMICalculator extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        title: "BMI Calculation by Adel Nabil",
-
+        title: "BMI And Search For Recipes: Adel Nabil",
 
         theme: ThemeData(
           appBarTheme: AppBarTheme(
@@ -50,7 +50,7 @@ class BMICalculator extends StatelessWidget {
               transition: Transition.cupertino,
               curve: Curves.easeOutCirc),
           GetPage(
-              name: TabBarController.pageRoute, page: () => TabBarController()),
+              name: BmiTabBarController.pageRoute, page: () => BmiTabBarController()),
         ]);
   }
 }

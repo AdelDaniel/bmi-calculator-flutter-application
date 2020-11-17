@@ -1,5 +1,5 @@
 name: bmi
-description: A new Flutter project.
+description: A Flutter project for calculation BMI and to search for Recipes.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -22,11 +22,15 @@ environment:
 
 dependencies:
   font_awesome_flutter: ^8.8.1
-  get: ^3.4.4
+  get:
   animated_text_kit: ^2.5.4
   sqflite:
   path:
   intl:
+  http:
+  webview_flutter:
+  flutter_search_bar:
+  cached_network_image:
 
   flutter:
     sdk: flutter

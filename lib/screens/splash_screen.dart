@@ -5,7 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../tab_controller.dart';
+import 'bottom_navigator_bar.dart';
+import 'tab_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/splashscreen';
@@ -16,8 +17,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future<void> hideScreen() async {
     await Future.delayed(Duration(milliseconds: 2950), () async {
-      Get.offAndToNamed(
-        TabBarController.pageRoute,
+      Get.offAll(MainButtonNavigatorBar()
       );
     });
   }

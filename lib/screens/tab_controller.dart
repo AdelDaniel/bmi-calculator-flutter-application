@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'screens/table_screean.dart';
-import 'screens/input_screen.dart';
-import 'controller/data_getX_controller.dart';
+
+import 'table_screean.dart';
+import 'input_screen.dart';
+import '../controller/data_getX_controller.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart' as ic;
 
-class TabBarController extends StatelessWidget {
+class BmiTabBarController extends StatelessWidget {
   static const String pageRoute = 'Tab Bar';
 
   final Controller controller = Get.put(Controller());
@@ -35,6 +36,7 @@ class TabBarController extends StatelessWidget {
             tabs: [
               Tab(icon: Icon(Icons.home)),
               Tab(icon: Icon(Icons.table_chart)),
+
             ],
           ),
         ),
@@ -42,6 +44,7 @@ class TabBarController extends StatelessWidget {
           children: [
             InputScreen(),
             TableScreen(),
+
           ],
         ),
       ),

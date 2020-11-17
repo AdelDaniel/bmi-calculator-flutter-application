@@ -1,5 +1,5 @@
 
-import 'package:bmi/widgets/main_table.dart';
+import '../widgets/main_table.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/data_getX_controller.dart';

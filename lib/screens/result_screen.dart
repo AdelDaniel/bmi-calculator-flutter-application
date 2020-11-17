@@ -55,6 +55,16 @@ class ResultScreen extends StatelessWidget {
       ),
       backgroundColor: kMainColor,
       body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [
+                  inactiveColor.withOpacity(0.7),
+                  activeColor.withOpacity(0.7)
+                ],
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter
+            )
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[

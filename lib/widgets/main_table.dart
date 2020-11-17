@@ -1,6 +1,6 @@
 
 
-import 'package:bmi/controller/data_getX_controller.dart';
+import '../controller/data_getX_controller.dart';
 import 'package:flutter/material.dart';
 import '../model/data_model.dart';
 import '../constants.dart';
