@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:bmi/constants.dart';
+import '../constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'bottom_navigator_bar.dart';
-import 'tab_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/splashscreen';

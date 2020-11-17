@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-class PluseAndMinusRoundButton extends StatelessWidget {
+class PlusAndMinusRoundButton extends StatelessWidget {
   final IconData myIcon;
   final Function onPressed;
 
-  PluseAndMinusRoundButton({this.myIcon, this.onPressed});
+  PlusAndMinusRoundButton({this.myIcon, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

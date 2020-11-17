@@ -1,15 +1,11 @@
 
-import 'package:bmi/constants.dart';
-import 'package:bmi/servieses/recipe_service.dart';
+import '../constants.dart';
+import '../services/recipe_service.dart';
 import 'package:get/get.dart';
 import '../widgets/my_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'dart:io';
-import 'package:bmi/widgets/MainBlock.dart';
-import 'package:bmi/widgets/recipe_card.dart';
-import 'package:flutter/foundation.dart';
+import '../widgets/recipe_card.dart';
 
 class RecipesScreen extends StatefulWidget {
   @override

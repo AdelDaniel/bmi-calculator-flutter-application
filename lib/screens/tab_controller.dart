@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'table_screean.dart';
+import 'table_screen.dart';
 import 'input_screen.dart';
 import '../controller/data_getX_controller.dart';
 import 'package:get/get.dart';

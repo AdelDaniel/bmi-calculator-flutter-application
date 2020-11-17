@@ -2,10 +2,9 @@
 
 import 'dart:ui';
 
-import 'package:bmi/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bmi/servieses/recipe_service.dart';
+import '../services/recipe_service.dart';
 import 'package:get/get.dart';
 
 

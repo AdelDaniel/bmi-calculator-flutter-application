@@ -5,7 +5,7 @@ import '../constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart' as ic;
-import '../widgets/PluseAndMinusRoundButton.dart';
+import '../widgets/PlusAndMinusRoundButton.dart';
 import 'result_screen.dart';
 import 'package:get/get.dart';
 import '../widgets/MainBlock.dart';
@@ -142,11 +142,11 @@ class _InputScreenState extends State<InputScreen> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: <Widget>[
-                                      PluseAndMinusRoundButton(
+                                      PlusAndMinusRoundButton(
                                         myIcon: ic.FontAwesomeIcons.plus,
                                         onPressed: () => changedAge(age + 1),
                                       ),
-                                      PluseAndMinusRoundButton(
+                                      PlusAndMinusRoundButton(
                                         myIcon: ic.FontAwesomeIcons.minus,
                                         onPressed: () => changedAge(age - 1),
                                       ),

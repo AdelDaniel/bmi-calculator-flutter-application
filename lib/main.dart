@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'screens/input_screen.dart';
 import 'screens/tab_controller.dart';
 import 'screens/result_screen.dart';
-import 'screens/table_screean.dart';
+import 'screens/table_screen.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(BMICalculator());

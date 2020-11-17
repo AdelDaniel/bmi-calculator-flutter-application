@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import '../widgets/ReultScreenButton.dart';
+import '../widgets/ResultScreenButton.dart';
 import '../widgets/ResultTableInfo.dart';
 import '../widgets/SaveDialog.dart';
 

@@ -1,11 +1,10 @@
 import 'dart:convert';
 
-import 'package:bmi/model/recipe.dart';
-import 'package:bmi/screens/recipe_web_view.dart';
+import '../model/recipe.dart';
+import 'recipe_web_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import '../constants.dart';
 
 class RecipeDetailScreen extends StatelessWidget {

@@ -1,8 +1,7 @@
 
-import 'package:bmi/constants.dart';
-import 'package:bmi/model/recipe.dart';
-import 'package:bmi/screens/recipe_detail_screen.dart';
-import 'package:flutter/foundation.dart';
+import '../constants.dart';
+import '../model/recipe.dart';
+import '../screens/recipe_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:get/get.dart';
