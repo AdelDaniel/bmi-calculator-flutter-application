@@ -1,9 +1,9 @@
 
+import '../model/data_model.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import '../model/data_model.dart';
 import '../widgets/ReultScreenButton.dart';
 import '../widgets/ResultTableInfo.dart';
 import '../widgets/SaveDialog.dart';
@@ -16,6 +16,9 @@ import '../widgets/SaveDialog.dart';
 
 class ResultScreen extends StatelessWidget {
   static const String routeName = "Result Screen";
+
+  // final BmiData newPersonData;
+  // const ResultScreen({this.newPersonData});
 
   @override
   Widget build(BuildContext context) {
@@ -32,21 +35,21 @@ class ResultScreen extends StatelessWidget {
     goodWeight1 = 19 * (newPersonData.height * newPersonData.height / 10000);
     goodWeight2 = 24.9 * (newPersonData.height * newPersonData.height / 10000);
 
-    if (finalResult <= 18.5) {
+    if (finalResult < 18.5) {
       resultText = "Underweight";
       resultDetails =
-          ' your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
-    } else if (finalResult <= 24.9 && finalResult > 18.5) {
+          'For Normal:\n Your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
+    } else if (finalResult <= 24.9 && finalResult >= 18.5) {
       resultText = "Normal Weight ";
       resultDetails = 'Your Weight Is Perfect';
     } else if (finalResult < 29.9 && finalResult > 24.9) {
       resultText = "Overweight";
       resultDetails =
-          ' your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
+          'For Normal:\n Your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
     } else if (finalResult > 29.9) {
       resultText = "Obesity ";
       resultDetails =
-          ' your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
+          'For Normal:\n Your Weight Must Be Between (${goodWeight1.toStringAsFixed(1)} ~ ${goodWeight2.toStringAsFixed(1)}) Kg';
     }
 
     return Scaffold(
@@ -109,10 +112,13 @@ class ResultScreen extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        resultDetails,
-                        style: kSecStyle,
-                        textAlign: TextAlign.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          resultDetails,
+                          style: kSecStyle,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                     ResultTableInfo(
@@ -122,7 +128,8 @@ class ResultScreen extends StatelessWidget {
               ),
             ),
             Container(
-              color: kMainColor,
+              margin: const EdgeInsets.only(left:10.0),
+              // color: kMainColor,
               child: Center(
                 child: Row(
                   children: <Widget>[
@@ -134,7 +141,7 @@ class ResultScreen extends StatelessWidget {
                       width: 5,
                     ),
                     Text(
-                      'your BMI must be Betweem (19 ~ 24.9)',
+                      'Your BMI must be Between (19 ~ 24.9)',
                     )
                   ],
                 ),

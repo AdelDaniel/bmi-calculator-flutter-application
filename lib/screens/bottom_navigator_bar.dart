@@ -1,11 +1,10 @@
 
 
-import 'file:///J:/max_projects/bmi/lib/screens/recipes_screen.dart';
-import 'file:///J:/max_projects/bmi/lib/screens/tab_controller.dart';
-import 'package:bmi/screens/about_developer_screen.dart';
+import 'recipes_screen.dart';
+import 'tab_controller.dart';
+import 'about_developer_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../constants.dart';
 
 class MainButtonNavigatorBar extends StatefulWidget {

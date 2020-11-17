@@ -1,5 +1,5 @@
-import 'file:///J:/max_projects/bmi/lib/screens/bottom_navigator_bar.dart';
-import 'package:bmi/screens/splash_screen.dart';
+
+import 'screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:flutter/cupertino.dart';
