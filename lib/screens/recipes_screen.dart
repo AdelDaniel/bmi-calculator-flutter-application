@@ -70,9 +70,9 @@ class _RecipesScreenState extends State<RecipesScreen> {
                       child: ListView.builder(
                         itemExtent: 200,
                         //shrinkWrap: true,
-                        itemCount: RecipeService.recipes.length,
+                        itemCount: RecipeService.getRecipes.length,
                         itemBuilder: (context, index)=> RecipeTile(
-                          recipe: RecipeService.recipes[index]
+                          recipe: RecipeService.getRecipes[index]
                         ),
                       )
                   ),

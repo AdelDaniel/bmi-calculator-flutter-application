@@ -1,5 +1,3 @@
-
-
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
@@ -16,14 +14,15 @@ class RecipeWebView extends StatefulWidget {
 class WebViewExampleState extends State<RecipeWebView> {
   final _key = UniqueKey();
   String runningUrl;
-  final Completer<WebViewController> _controller = Completer<WebViewController>();
+  final Completer<WebViewController> _controller =
+      Completer<WebViewController>();
   num _stackToView = 1;
 
   @override
   void initState() {
     super.initState();
     // Enable hybrid composition.
-    runningUrl = widget.url.replaceAll("http:","https:");
+    runningUrl = widget.url.replaceAll("http:", "https:");
     if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
 
@@ -32,28 +31,28 @@ class WebViewExampleState extends State<RecipeWebView> {
     return Scaffold(
       body: IndexedStack(
         index: _stackToView,
-        children:[WebView(
-          key: _key,
-          javascriptMode: JavascriptMode.unrestricted,
-          onPageFinished: (finish) {
-            setState(() {
-              _stackToView = 0;
-            });
-          },
-          onWebViewCreated: (webViewCreate) {
-            _controller.complete(webViewCreate);
-          },
-          initialUrl: runningUrl,
-        ),
+        children: [
+          WebView(
+            key: _key,
+            javascriptMode: JavascriptMode.unrestricted,
+            onPageFinished: (finish) {
+              setState(() {
+                _stackToView = 0;
+              });
+            },
+            onWebViewCreated: (webViewCreate) {
+              _controller.complete(webViewCreate);
+            },
+            initialUrl: runningUrl,
+          ),
           Container(
             color: Colors.white,
             child: Center(
               child: CircularProgressIndicator(),
             ),
           ),
-
-        ]
-      )
+        ],
+      ),
     );
   }
 }
