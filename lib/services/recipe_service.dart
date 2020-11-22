@@ -2,18 +2,17 @@ import 'dart:convert';
 import '../model/recipe.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import '../very_important_data_keys.dart';
 
 class RecipeService extends GetxController {
   List<MainItem> mainItems = [];
   //List hits = [];
   static RxList _recipes = List<Recipe>().obs;
-  static const String _applicationID = "acfdcdf7";
-  static const String _applicationKey = '2c2a9bbb08a38991897cb7bdc5c3b493';
 
   Future getAllRecipes(String searchWord) async {
     _recipes.clear();
     String url =
-        "https://api.edamam.com/search?q=$searchWord&app_id=$_applicationID&app_key=$_applicationKey";
+        "https://api.edamam.com/search?q=$searchWord&app_id=$applicationID&app_key=$applicationKey";
     var response = await http.get(url);
     //  print(" $response this is response");
     Map<String, dynamic> jsonDataBody = jsonDecode(response.body);
