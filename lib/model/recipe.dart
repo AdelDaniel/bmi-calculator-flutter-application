@@ -11,14 +11,11 @@ class MainItem {
   bool get bookmarked => _bookmarked;
   bool get bought => _bought;
 
-  MainItem({
-      Recipe recipe, 
-      bool bookmarked, 
-      bool bought}){
+  MainItem({Recipe recipe, bool bookmarked, bool bought}) {
     _recipe = recipe;
     _bookmarked = bookmarked;
     _bought = bought;
-}
+  }
 
   MainItem.fromJson(dynamic json) {
     _recipe = json["recipe"] != null ? Recipe.fromJson(json["recipe"]) : null;
@@ -35,7 +32,6 @@ class MainItem {
     map["bought"] = _bought;
     return map;
   }
-
 }
 
 /// uri : "http://www.edamam.com/ontologies/edamam.owl#recipe_bd818ac62f10d157503eba108aa37d81"
@@ -73,7 +69,7 @@ class Recipe {
   double _calories;
   double _totalWeight;
   double _totalTime;
-  Map<String ,dynamic> _totalNutrients;
+  Map<String, dynamic> _totalNutrients;
   // TotalDaily _totalDaily;
   List<Digest> _digest;
 
@@ -88,34 +84,33 @@ class Recipe {
   List<String> get healthLabels => _healthLabels;
   List<String> get cautions => _cautions;
   List<String> get ingredientLines => _ingredientLines;
- // List<Ingredients> get ingredients => _ingredients;
+  // List<Ingredients> get ingredients => _ingredients;
   double get calories => _calories;
   double get totalWeight => _totalWeight;
   double get totalTime => _totalTime;
-  Map<String ,dynamic> get totalNutrients => _totalNutrients;
+  Map<String, dynamic> get totalNutrients => _totalNutrients;
   // TotalDaily get totalDaily => _totalDaily;
   List<Digest> get digest => _digest;
 
-  Recipe({
-      String uri, 
-      String label, 
-      String image, 
-      String source, 
-      String url, 
-      String shareAs, 
-      double yield, 
-      List<String> dietLabels, 
-      List<String> healthLabels, 
-      List<String> cautions, 
-      List<String> ingredientLines, 
+  Recipe(
+      {String uri,
+      String label,
+      String image,
+      String source,
+      String url,
+      String shareAs,
+      double yield,
+      List<String> dietLabels,
+      List<String> healthLabels,
+      List<String> cautions,
+      List<String> ingredientLines,
 //      List<Ingredients> ingredients,
-      double calories, 
-      double totalWeight, 
+      double calories,
+      double totalWeight,
       double totalTime,
-      Map<String ,dynamic> totalNutrients,
+      Map<String, dynamic> totalNutrients,
 //       TotalDaily totalDaily,
-      List<Digest> digest
-       }){
+      List<Digest> digest}) {
     _uri = uri;
     _label = label;
     _image = image;
@@ -127,14 +122,14 @@ class Recipe {
     _healthLabels = healthLabels;
     _cautions = cautions;
     _ingredientLines = ingredientLines;
-   // _ingredients = ingredients;
+    // _ingredients = ingredients;
     _calories = calories;
     _totalWeight = totalWeight;
     _totalTime = totalTime;
     _totalNutrients = totalNutrients;
     // _totalDaily = totalDaily;
     _digest = digest;
- }
+  }
 
   Recipe.fromJson(dynamic json) {
     _uri = json["uri"];
@@ -144,10 +139,14 @@ class Recipe {
     _url = json["url"];
     _shareAs = json["shareAs"];
     _yield = json["yield"];
-    _dietLabels = json["dietLabels"] != null ? json["dietLabels"].cast<String>() : [];
-    _healthLabels = json["healthLabels"] != null ? json["healthLabels"].cast<String>() : [];
+    _dietLabels =
+        json["dietLabels"] != null ? json["dietLabels"].cast<String>() : [];
+    _healthLabels =
+        json["healthLabels"] != null ? json["healthLabels"].cast<String>() : [];
     _cautions = json["cautions"] != null ? json["cautions"].cast<String>() : [];
-    _ingredientLines = json["ingredientLines"] != null ? json["ingredientLines"].cast<String>() : [];
+    _ingredientLines = json["ingredientLines"] != null
+        ? json["ingredientLines"].cast<String>()
+        : [];
     // if (json["ingredients"] != null) {
     //   _ingredients = [];
     //   json["ingredients"].forEach((v) {
@@ -157,7 +156,7 @@ class Recipe {
     _calories = json["calories"];
     _totalWeight = json["totalWeight"];
     _totalTime = json["totalTime"];
-    _totalNutrients = json["totalNutrients"] ;
+    _totalNutrients = json["totalNutrients"];
     // _totalDaily = json["totalDaily"] != null ? TotalDaily.fromJson(json["totalDaily"]) : null;
     if (json["digest"] != null) {
       _digest = [];
@@ -197,7 +196,6 @@ class Recipe {
     }
     return map;
   }
-
 }
 
 /// label : "Fat"
@@ -228,15 +226,15 @@ class Digest {
   String get unit => _unit;
   List<Sub> get sub => _sub;
 
-  Digest({
-      String label, 
-      String tag, 
-      String schemaOrgTag, 
-      double total, 
-      bool hasRDI, 
-      double daily, 
-      String unit, 
-      List<Sub> sub}){
+  Digest(
+      {String label,
+      String tag,
+      String schemaOrgTag,
+      double total,
+      bool hasRDI,
+      double daily,
+      String unit,
+      List<Sub> sub}) {
     _label = label;
     _tag = tag;
     _schemaOrgTag = schemaOrgTag;
@@ -245,7 +243,7 @@ class Digest {
     _daily = daily;
     _unit = unit;
     _sub = sub;
-}
+  }
 
   Digest.fromJson(dynamic json) {
     _label = json["label"];
@@ -277,7 +275,6 @@ class Digest {
     }
     return map;
   }
-
 }
 
 /// label : "Saturated"
@@ -305,14 +302,14 @@ class Sub {
   double get daily => _daily;
   String get unit => _unit;
 
-  Sub({
-      String label, 
-      String tag, 
-      String schemaOrgTag, 
-      double total, 
-      bool hasRDI, 
-      double daily, 
-      String unit}){
+  Sub(
+      {String label,
+      String tag,
+      String schemaOrgTag,
+      double total,
+      bool hasRDI,
+      double daily,
+      String unit}) {
     _label = label;
     _tag = tag;
     _schemaOrgTag = schemaOrgTag;
@@ -320,7 +317,7 @@ class Sub {
     _hasRDI = hasRDI;
     _daily = daily;
     _unit = unit;
-}
+  }
 
   Sub.fromJson(dynamic json) {
     _label = json["label"];
@@ -343,12 +340,9 @@ class Sub {
     map["unit"] = _unit;
     return map;
   }
-
 }
 
-
-
-
+/*
 
 
 /// ENERC_KCAL : {"label":"Energy","quantity":8.069899999959114,"unit":"%"}
@@ -1543,3 +1537,5 @@ class ENERC_KCAL {
   }
 
 }
+
+*/
