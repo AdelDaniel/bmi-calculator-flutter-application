@@ -1,16 +1,132 @@
-# bmi
+# BMI And Search For Recipes
 
-A new Flutter project.
+<br />
+<p align="center">
+  <a href="#">
+    <img src="read_me_files/bmi_logo.png" alt="Logo" width="80" height="80">
+  </a>
+</br>
+  <h2 align="center"> BMI And Search For Recipes </h2>
 
-## Getting Started
+</br>
 
-This project is a starting point for a Flutter application.
+<center>
+ A Flutter project for calculation BMI and to search for Recipes.
+</center>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Sections
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [App Gif Screen](#GIF_Screens)
+- [Packages And_Dependacies](#Packages_And_Dependacies)
+- [App Screen](#App_Screen)
+
+---
+
+## GIF_Screens
+
+<div>
+    <table>
+        <tr>
+            <td> 
+                <a>
+                    <img src="read_me_files/intro_gif.gif" width="230"/>
+                </a>
+            </td>    
+            <td>   
+                <a>
+                    <img src="read_me_files/gif2.gif" width="230"/>                   
+                </a>
+            </td>
+             <td>   
+                <a>
+                    <img src="read_me_files/gif3.gif" width="230"/>                   
+                </a>
+            </td>        
+        </tr>
+        <tr>
+            <td> 
+                <a>
+                    <img src="read_me_files/gif4.gif" width="230"/>
+                </a>
+            </td>    
+            <td>   
+                <a>
+                    <img src="read_me_files/gif5.gif" width="230"/>                   
+                </a>
+            </td>
+            <td>   
+                <a>
+                    <img src="read_me_files/gif6.gif" width="230"/>                   
+                </a>
+            </td>            
+        </tr>
+    </table>
+</div>
+
+---
+
+## Packages_And_Dependacies
+
+- font_awesome_flutter
+- get
+- animated_text_kit
+- sqflite
+- path
+- intl
+- http
+- webview_flutter
+- flutter_search_bar
+- cached_network_image
+- cupertino_icons
+- flutter_launcher_icons:
+
+---
+
+## App_Screen
+
+<div>
+    <table>
+        <tr>
+             <td> 
+                <a>
+                    <img src="read_me_files/screen_input.JPG"/>
+                </a>
+            </td> 
+            <td>   
+                <a>
+                    <img src="read_me_files/result_screen.JPG"/>
+                </a>
+            </td>          
+        </tr>
+        <tr>
+            <td> 
+                <a>
+                    <img src="read_me_files/recipe_detail_screen.JPG" />
+                </a>
+            </td>    
+                <td>   
+                <a>
+                    <img src="read_me_files/find_food_screen.JPG" />
+                </a>
+            </td>      
+        </tr>
+        <tr>  
+            <td>   
+                <a>
+                    <img src="read_me_files/table_screen.JPG"/>
+                </a>
+            </td>   
+            <td> 
+                <a>
+                    <img src="read_me_files/about_developer_screen.JPG" />
+                </a>
+            </td>           
+        </tr>
+    </table>
+</div>
+
+<center>
+    <img src="read_me_files/all.JPG"  width=100%  >
+</center>
